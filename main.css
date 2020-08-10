@@ -1,0 +1,123 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url("https://images.unsplash.com/photo-1488998427799-e3362cec87c3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjE3MzYxfQ&auto=format&fit=crop&w=1500&q=80");
+    background-repeat: repeat;
+    background-size: auto;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    color: #ffffff;
+}
+
+header h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 60px;
+    color: #fff;
+    padding: 30px;
+    text-shadow: #000000 2px 3px 2px;
+}
+
+nav {
+    background-color: #708090;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+nav img {
+    width: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    overflow: auto;
+}
+
+input {
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-family:'Josefin Sans', sans-serif; 
+    font-size: 16px;
+    padding: 2px;
+}
+
+input:focus {
+    outline: none;
+}
+
+
+#cadastro {
+    margin: 4vh 20vw;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: #ccc 2px 2px 2px;
+}
+
+#registerNumber {
+    width: 15vw;
+}
+
+#name {
+    width: 40vw;
+}
+
+#EstadoCivil {
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-family:'Josefin Sans', sans-serif; 
+    font-size: 18px;
+    padding: 5px;
+}
+
+#rua {
+    width: 50vw;
+}
+
+#complemento {
+    width: 20vw;
+}
+
+#bairro {
+    width: 20vw;
+}
+
+#cidade {
+    width: 20vw;
+}
+
+#estado {
+    width: 20vw;
+}
+
+button {
+    padding: 20px;
+    margin-bottom: 10px;
+    background-color: #708090;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-family:'Josefin Sans', sans-serif; 
+    font-size: 20px;
+    outline: none;
+}
+
+button:hover {
+    background-color: darkgrey;
+    transition: ease-in-out 0.5s;
+}
+
+
+
