@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,39 +8,49 @@
     <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
         <center>
-        <h1>iCollaborator</h1>
+            <h1>iCollaborator</h1>
         </center>
     </header>
 
     <nav>
         <a href=""><img src="https://image.flaticon.com/icons/svg/566/566082.svg" alt=""> Cadastrar</a>
-       <a href=""> <img src="https://image.flaticon.com/icons/svg/860/860812.svg" alt=""> Consultar Funcionários</a>
+        <a href=""> <img src="https://image.flaticon.com/icons/svg/860/860812.svg" alt=""> Consultar Funcionários</a>
     </nav>
 
     <main>
         <div id="cadastro">
-            <form action="">
+            <form>
+
                 <label for="registerNumber">Nº de Matricula: </label>
-                <input type="text" name="registerNumber" id="registerNumber">
+                <input type="text" name="registerNumber" id="registerNumber" maxlength="6" oninput="mat()"
+                    onchange="matInvalid()" required>
                 <br>
                 <br>
+
                 <label for="name">Nome do Colaborador:</label>
-                <input type="text"  id="name">
+                <input type="text" id="name" onchange="nomeInvalid()" required>
                 <br><br>
+
                 <label for="CPF">CPF:</label>
-                <input type="text"  id="CPF">
+                <input type="text" id="CPF" maxlength="14" oninput="ponto()" onchange="cpfInvalid()" required>
+                <label for="CPF">RG:</label>
+                <input type="text" id="rg" maxlength="12" oninput="ponto2()" onchange="RGInvalid()" required>
                 <label for="DataDeNascimento">Data de Nascimento:</label>
-                <input type="date"  id="DataDeNascimento">
+                <input type="date" id="DataDeNascimento" required>
                 <br><br>
-                <label for="CNH">Tipo de CNH:</label>
-                <input type="checkbox" name="Categoria A" id="CNH"> Categoria A
-                <input type="checkbox" name="Categoria B" id="CNH"> Categoria B
+
+                <label for="CNH">Tipo de CNH:
+                    <input type="checkbox" name="Categoria A" id="CNH"> Categoria A
+                    <input type="checkbox" name="Categoria B" id="CNH"> Categoria B
+                </label>
                 <br><br>
+
                 <label for="EstadoCivil">Estado Civil:</label>
-                <select name="" id="EstadoCivil">
+                <select name="" id="EstadoCivil" required>
                     <optgroup>
                         <option value="opcao1" class="navigator">Escolha uma opção</option>
                         <option value="solteiro" class="navigator">Solteiro(a)</option>
@@ -50,26 +61,36 @@
                     </optgroup>
                 </select>
                 <br><br>
+
                 <label for="CEP">CEP:</label>
-                <input type="text" id="CEP">
+                <input type="text" placeholder="CEP" oninput="getDadosEnderecoPorCep(this.value)" onchange="CEPInvalid()" required>
                 <br><br>
+
                 <label for="rua">Rua:</label>
-                <input type="text"  id="rua">
+                <input type="text" placeholder="Logradouro" readonly id="logradouro" />
                 <br><br>
+
                 <label for="complemento">Complemento:</label>
-                <input type="text"  id="complemento">
+                <input type="text" id="complemento">
                 <label for="bairro">Bairro: </label>
-                <input type="text"  id="bairro">
+                <input type="text" id="bairro" onchange="BairroInvalid()" required>
                 <br><br>
+
                 <label for="cidade">Cidade: </label>
-                <input type="text"  id="cidade">
+                <input type="text" id="cidade" onchange="CidadeInvalid() " required>
                 <label for="estado">Estado: </label>
-                <input type="text"  id="estado">
+                <input type="text" id="uf" onchange="EstadoInvalid()" required>
+
             </form>
         </div>
-            <center>
-            <button>Salvar</button>
-            </center>
+
+        <center>
+            <button id="btn">Salvar</button>
+        </center>
     </main>
+
+
+    <script src="script.js"></script>
 </body>
+
 </html>
