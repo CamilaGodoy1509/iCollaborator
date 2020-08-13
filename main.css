@@ -75,6 +75,15 @@ input:focus {
     width: 40vw;
 }
 
+#cnh {
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-family:'Josefin Sans', sans-serif; 
+    font-size: 18px;
+    padding: 5px;
+}
+
+
 #EstadoCivil {
     border-radius: 10px;
     border: 1px solid #ccc;
@@ -83,12 +92,12 @@ input:focus {
     padding: 5px;
 }
 
-#rua {
-    width: 50vw;
+#logradouro {
+    width: 30vw;
 }
 
 #complemento {
-    width: 20vw;
+    width: 10vw;
 }
 
 #bairro {
@@ -100,7 +109,7 @@ input:focus {
 }
 
 #estado {
-    width: 20vw;
+    width: 5vw;
 }
 
 button {
